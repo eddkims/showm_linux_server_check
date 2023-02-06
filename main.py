@@ -239,7 +239,7 @@ def run():
 
     # >>>>>>>>>>>>>>>>>>>>>>>>>> 각각 서버에 접근
 
-    # DB_list = {'15.164.101.217' : 'aws101'}
+    # DB_list = {'xxx.164.101.xxx' : 'aws101'}
     for idx,(host,server_name) in enumerate(DB_list.items(),start=1) :
         try :
             no_j_flag = False
@@ -247,7 +247,7 @@ def run():
             print(f'{cur_time} >> {idx} / {len_DB_list} 번째 서버 검사를 시작하겠습니다.\n 서버 이름 : {server_name}\n 서버 ip : {host}')
             host = host
             user = 'root'
-            password = 'xptmxm12'
+            password = 'password'
             try :
                 conn = ssh_connect(hostname=host,username=user,password=password)
             except paramiko.BadAuthenticationType:
